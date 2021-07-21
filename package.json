@@ -9,7 +9,10 @@
   "dependencies": {
     "dotenv": "10.0.0",
     "ioredis": "4.27.6",
+    "pg": "8.6.0",
+    "pg-hstore": "2.3.4",
     "sequelize": "6.6.5",
+    "umzug": "v3.0.0-beta.5",
     "yargs": "17.0.1"
   },
   "scripts": {
@@ -21,6 +24,7 @@
   "devDependencies": {
     "@types/ioredis": "4.26.6",
     "@types/node": "16.4.0",
+    "@types/validator": "^13.6.3",
     "@types/yargs": "17.0.2",
     "prettier": "2.3.2",
     "ts-node": "10.1.0",
