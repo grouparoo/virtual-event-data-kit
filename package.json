@@ -1,0 +1,14 @@
+{
+  "name": "virtual-event-database",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "15",
+    "npm": "7"
+  },
+  "dependencies": {
+    "ioredis": "4.27.6",
+    "sequelize": "6.6.5"
+  },
+  "scripts": {}
+}
