@@ -1,4 +1,4 @@
-# Virtual Event Database
+# Virtual Event Data Kit
 
 This project is meant to be deployed to Heroku and serve as the Redis storage for a conference website made from the [virtual-event-starter-kit](https://github.com/vercel/virtual-event-starter-kit).
 
