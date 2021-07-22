@@ -1,14 +1,15 @@
 import Redis from "ioredis";
 
-const redis = process.env.REDIS_URL
-  ? new Redis(process.env.REDIS_URL)
-  : undefined;
-
 export function getRedisClient(): Redis.Redis {
-  if (!redis) {
+  const url = process.env.REDIS_URL || "";
+  if (!url) {
     throw new Error("REDIS_URL env variable not set.");
   }
-  return redis;
+  const protocol = url.split(":")[0].toLowerCase();
+  const options = {
+    tls: protocol === "rediss" ? { rejectUnauthorized: false } : undefined,
+  };
+  return new Redis(process.env.REDIS_URL, options);
 }
 
 interface Processor {
