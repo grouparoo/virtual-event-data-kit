@@ -5,11 +5,11 @@ require("dotenv").config();
 const argv = require("yargs")
   .help("h")
   .alias("h", "help")
-  .example("$0", "sync redis to postgres")
+  .example("$0", "increment the ticket number by about 1000")
   .usage("Usage: $0").argv;
 
 const dir = process.env.NODE_ENV === "development" ? "src" : "dist";
-require(`./${dir}/redis_to_postgres`)
+require(`./${dir}/incr_ticket_number`)
   .cmd(argv)
   .then(
     () => {
