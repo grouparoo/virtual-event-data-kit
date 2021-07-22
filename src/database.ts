@@ -5,7 +5,26 @@ const sequelize = process.env.DATABASE_URL
   ? new Sequelize(process.env.DATABASE_URL)
   : null;
 
-class Registrant extends Model {}
+interface RegistrantAttributes {
+  id: string | null;
+  email: string | null;
+  name: string | null;
+  username: string | null;
+  ticketNumber: number | null;
+}
+class Registrant
+  extends Model<RegistrantAttributes>
+  implements RegistrantAttributes
+{
+  public id!: string;
+  public email!: string;
+  public name!: string;
+  public username!: string;
+  public ticketNumber!: number;
+
+  public createdAt!: Date;
+  public updatedAt!: Date;
+}
 
 export async function initializeDatabase() {
   if (!sequelize) {
@@ -22,11 +41,15 @@ export async function initializeDatabase() {
       },
       ticketNumber: {
         type: DataTypes.INTEGER,
-        allowNull: false,
       },
       email: {
         type: DataTypes.STRING(191),
-        allowNull: false,
+      },
+      name: {
+        type: DataTypes.STRING(191),
+      },
+      username: {
+        type: DataTypes.STRING(191),
       },
     },
     {

@@ -3,24 +3,27 @@ export default {
   up: async function (migration: QueryInterface, DataTypes: any) {
     await migration.sequelize.transaction(async () => {
       await migration.createTable("registrants", {
-        ticketNumber: {
-          type: DataTypes.INTEGER,
+        id: {
+          type: DataTypes.STRING(191),
           primaryKey: true,
         },
-
+        ticketNumber: {
+          type: DataTypes.INTEGER,
+        },
         email: {
           type: DataTypes.STRING(191),
-          allowNull: false,
         },
-
+        name: {
+          type: DataTypes.STRING(191),
+        },
+        username: {
+          type: DataTypes.STRING(191),
+        },
         createdAt: {
           type: DataTypes.DATE,
-          allowNull: false,
         },
-
         updatedAt: {
           type: DataTypes.DATE,
-          allowNull: false,
         },
       });
     });
