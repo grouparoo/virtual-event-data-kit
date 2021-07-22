@@ -34,7 +34,7 @@ class Syncer {
       "createdAt"
     );
     const [found] = await Registrant.findOrBuild({ where: { id } });
-    found.ticketNumber = data[0];
+    found.ticketNumber = parseInt(data[0], 10);
     found.email = data[1];
     found.name = data[2];
     found.username = data[3];
