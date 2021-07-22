@@ -21,4 +21,11 @@ There are additional tools on top of that
 
 ### Deploy
 
-Push to Heroku
+- Provision a server with these add-ons
+  - Heroku Postgres (sets DATABASE_URL)
+  - Heroku Redis (sets REDIS_URL)
+  - Heroku Scheduler
+
+Then you can deploy to that server.
+
+Use the Redis details for your virtual-event-starter-kit.

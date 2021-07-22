@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "15",
-    "npm": "7"
+    "node": "15"
   },
   "dependencies": {
     "dotenv": "10.0.0",
@@ -17,7 +16,6 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development ts-node redis_to_postgres",
-    "postinstall": "npm run build",
     "build": "rm -rf dist && tsc",
     "start": "./redis_to_postgres",
     "incr": "./incr_ticket_number"
