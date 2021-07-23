@@ -6,27 +6,30 @@
     "node": "15"
   },
   "dependencies": {
-    "dotenv": "10.0.0",
-    "ioredis": "4.27.6",
-    "pg": "8.6.0",
-    "pg-hstore": "2.3.4",
-    "sequelize": "6.6.5",
-    "umzug": "v3.0.0-beta.5",
+    "@grouparoo/core": "0.5.1",
+    "@grouparoo/postgres": "0.5.1",
+    "@grouparoo/ui-community": "0.5.1",
+    "grouparoo": "^0.5.1",
     "yargs": "17.0.1"
   },
   "scripts": {
     "dev": "NODE_ENV=development ts-node redis_to_postgres",
     "build": "rm -rf dist && tsc",
     "start": "./redis_to_postgres",
-    "incr": "./incr_ticket_number"
+    "grouparoo": "grouparoo run",
+    "config": "grouparoo config"
   },
   "devDependencies": {
-    "@types/ioredis": "4.26.6",
+    "@grouparoo/ui-config": "0.5.1",
     "@types/node": "16.4.0",
-    "@types/validator": "13.6.3",
     "@types/yargs": "17.0.2",
     "prettier": "2.3.2",
     "ts-node": "10.1.0",
     "typescript": "4.3.5"
+  },
+  "grouparoo": {
+    "plugins": [
+      "@grouparoo/postgres"
+    ]
   }
 }
