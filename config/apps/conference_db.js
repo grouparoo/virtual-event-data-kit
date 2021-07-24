@@ -13,7 +13,9 @@ exports.default = async function buildConfig() {
 
 function parseURL() {
   // fetch warehouse connection from DATABASE_URL
-  const parsed = new URL(process.env.DATABASE_URL);
+  const parsed = new URL(
+    process.env.EVENT_DATABASE_URL || process.env.DATABASE_URL
+  );
   const options = {
     user: undefined,
     password: undefined,
