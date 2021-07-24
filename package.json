@@ -8,23 +8,13 @@
   "dependencies": {
     "@grouparoo/core": "0.5.1",
     "@grouparoo/postgres": "0.5.1",
-    "@grouparoo/ui-community": "0.5.1",
-    "grouparoo": "0.5.1",
-    "yargs": "17.0.1"
+    "@grouparoo/ui-community": "0.5.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development ts-node redis_to_postgres",
-    "start": "./redis_to_postgres",
-    "grouparoo": "grouparoo run",
-    "config": "grouparoo config"
+    "start": "cd node_modules/@grouparoo/core && ./bin/start"
   },
   "devDependencies": {
-    "@grouparoo/ui-config": "0.5.1",
-    "@types/node": "16.4.0",
-    "@types/yargs": "17.0.2",
-    "prettier": "2.3.2",
-    "ts-node": "10.1.0",
-    "typescript": "4.3.5"
+    "@grouparoo/ui-config": "0.5.1"
   },
   "grouparoo": {
     "plugins": [
