@@ -37,3 +37,5 @@ Set these environment variables:
 - WEB_URL=https://www.yourwebsite.com
 - SERVER_TOKEN=my-super-cool-server-token (but changed)
 - DATABASE_SSL_SELF_SIGNED=false (or true if on upgraded Heroku database)
+- GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true (Heroku adds timestamps to all log messages)
+- GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true

@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development ts-node redis_to_postgres",
-    "build": "rm -rf dist && tsc",
+    "build": "npm install && rm -rf dist && tsc",
     "start": "./redis_to_postgres",
     "grouparoo": "grouparoo run",
     "config": "grouparoo config"
