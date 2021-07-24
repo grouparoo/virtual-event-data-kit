@@ -1,7 +1,7 @@
 {
   "author": "Grouparoo Inc <hello@grouparoo.com>",
-  "name": "@grouparoo/app-example-heroku",
-  "description": "An example Grouparoo Deployment",
+  "name": "virtual-event-data-kit",
+  "description": "Data storage and sync for virtual-event-starter-kit",
   "version": "0.0.1",
   "license": "MPL-2.0",
   "private": true,
