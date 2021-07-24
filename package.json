@@ -22,5 +22,8 @@
       "@grouparoo/mailchimp",
       "@grouparoo/postgres"
     ]
+  },
+  "devDependencies": {
+    "@grouparoo/ui-config": "0.5.1"
   }
 }
