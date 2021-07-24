@@ -19,7 +19,7 @@ There are additional tools on top of that
 
 `npm start`
 
-### Deploy
+### Deploy Redis to Postgres
 
 - Provision a server with these add-ons
   - Heroku Postgres (sets DATABASE_URL)
@@ -29,3 +29,11 @@ There are additional tools on top of that
 Then you can deploy to that server.
 
 Use the Redis details for your virtual-event-starter-kit.
+
+### Deploy Grouparoo
+
+Set these environment variables:
+
+- WEB_URL=https://www.yourwebsite.com
+- SERVER_TOKEN=my-super-cool-server-token (but changed)
+- DATABASE_SSL_SELF_SIGNED=false (or true if on upgraded Heroku database)
