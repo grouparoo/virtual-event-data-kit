@@ -29,5 +29,8 @@ function parseURL() {
   if (parsed.port) options.port = parsed.port;
   if (parsed.pathname) options.database = parsed.pathname.substring(1);
 
+  if (process.env.DATABASE_SSL_SELF_SIGNED?.toLowerCase() === "true") {
+    options.ssl = "true";
+  }
   return options;
 }
