@@ -1,15 +1,15 @@
 {
   "class": "Property",
-  "id": "ticket_number",
-  "type": "integer",
-  "name": "Ticket Number",
+  "id": "github_username",
+  "type": "string",
+  "name": "Github Username",
   "sourceId": "registrants",
   "unique": false,
-  "identifying": true,
+  "identifying": false,
   "isArray": false,
   "options": {
     "aggregationMethod": "exact",
-    "column": "ticketNumber"
+    "column": "username"
   },
   "filters": []
 }

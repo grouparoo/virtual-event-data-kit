@@ -17,8 +17,8 @@
     "id": "registrants_schedule",
     "name": "Registrants schedule",
     "sourceId": "registrants",
-    "recurring": false,
-    "recurringFrequency": 0,
+    "recurring": true,
+    "recurringFrequency": 240000,
     "options": {
       "column": "updatedAt"
     },

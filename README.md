@@ -34,8 +34,12 @@ Use the Redis details for your virtual-event-starter-kit.
 
 Set these environment variables:
 
-- WEB_URL=https://www.yourwebsite.com
-- SERVER_TOKEN=my-super-cool-server-token (but changed)
-- DATABASE_SSL_SELF_SIGNED=true
-- GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true (Heroku adds timestamps to all log messages)
-- GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true
+```
+WEB_URL=https://www.yourwebsite.com
+SERVER_TOKEN=my-super-cool-server-token (but changed)
+DATABASE_SSL_SELF_SIGNED=true
+GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true (Heroku adds timestamps to all log messages)
+GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true
+GROUPAROO_OPTION__APP__MAILCHIMP_API_KEY=abc-us4
+GROUPAROO_OPTION__DESTINATION__MAILCHIMP_LIST_ID=xyz
+```

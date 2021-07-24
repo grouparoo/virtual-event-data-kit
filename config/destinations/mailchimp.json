@@ -1,0 +1,18 @@
+{
+  "class": "Destination",
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "type": "mailchimp-export",
+  "appId": "mailchimp",
+  "groupId": "all_emails",
+  "syncMode": "additive",
+  "options": {
+    "listId": "MAILCHIMP_LIST_ID"
+  },
+  "mapping": {
+    "FULLNAME": "name",
+    "TICKET": "ticket_number",
+    "email_address": "email"
+  },
+  "destinationGroupMemberships": {}
+}
