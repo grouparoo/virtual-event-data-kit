@@ -1,5 +1,5 @@
 import { migrateUp } from "./migrate";
-import { Sequelize } from "sequelize";
+import { Sequelize, Options } from "sequelize";
 import { initRegistrant, Registrant } from "./registrant";
 
 export async function initializeDatabase() {
@@ -7,24 +7,15 @@ export async function initializeDatabase() {
   if (!url) {
     throw new Error("DATABASE_URL env variable not set.");
   }
-  let sequelize = new Sequelize(url);
-  try {
-    await sequelize.authenticate();
-  } catch (err) {
-    if (err.message.indexOf("SSL") >= 0) {
-      sequelize = new Sequelize(url, {
-        dialectOptions: {
-          ssl: { rejectUnauthorized: false },
-        },
-      });
-      try {
-        await sequelize.authenticate();
-      } catch (err2) {
-        console.log("ssl error too", err2.message);
-        throw err; // throw the original error
-      }
-    }
+  const options: Options = {};
+  if (process.env.DATABASE_SSL_SELF_SIGNED?.toLowerCase() === "true") {
+    options.dialectOptions = {
+      ssl: { rejectUnauthorized: false },
+    };
   }
+
+  let sequelize = new Sequelize(url, options);
+  await sequelize.authenticate();
   await migrateUp(sequelize);
   initRegistrant(sequelize);
 }

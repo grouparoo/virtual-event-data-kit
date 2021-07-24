@@ -26,6 +26,10 @@ There are additional tools on top of that
   - Heroku Redis (sets REDIS_URL)
   - Heroku Scheduler
 
+And set this environment variable
+
+- `DATABASE_SSL_SELF_SIGNED=true`
+
 Then you can deploy to that server.
 
 Use the Redis details for your virtual-event-starter-kit.
@@ -37,7 +41,6 @@ Set these environment variables:
 ```
 WEB_URL=https://www.yourwebsite.com
 SERVER_TOKEN=my-super-cool-server-token (but changed)
-DATABASE_SSL_SELF_SIGNED=true
 GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true (Heroku adds timestamps to all log messages)
 GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true
 GROUPAROO_OPTION__APP__MAILCHIMP_API_KEY=abc-us4
