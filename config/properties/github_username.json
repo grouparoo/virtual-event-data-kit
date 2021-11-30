@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "github_username",
   "type": "string",
-  "name": "Github Username",
+  "key": "Github Username",
   "sourceId": "registrants",
   "unique": false,
   "identifying": false,

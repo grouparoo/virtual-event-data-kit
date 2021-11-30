@@ -1,0 +1,10 @@
+[
+  {
+    "id": "pro_e42ebc13-6f1c-4079-a733-010bbc6a64f8",
+    "class": "Record",
+    "modelId": "registrants",
+    "properties": {
+      "email": ["brian@bleonard.com"]
+    }
+  }
+]

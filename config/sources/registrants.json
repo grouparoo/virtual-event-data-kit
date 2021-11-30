@@ -2,8 +2,9 @@
   {
     "class": "Source",
     "id": "registrants",
+    "modelId": "registrants",
     "name": "Registrants",
-    "type": "postgres-table-import",
+    "type": "postgres-import-table",
     "appId": "conference_db",
     "options": {
       "table": "registrants"
@@ -19,6 +20,7 @@
     "sourceId": "registrants",
     "recurring": true,
     "recurringFrequency": 240000,
+    "confirmRecords": false,
     "options": {
       "column": "updatedAt"
     },

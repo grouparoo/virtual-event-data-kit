@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "registered_at",
   "type": "date",
-  "name": "Registered At",
+  "key": "Registered At",
   "sourceId": "registrants",
   "unique": false,
   "identifying": false,
