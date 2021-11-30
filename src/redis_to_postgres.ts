@@ -41,7 +41,7 @@ class Syncer {
       found.username = data[3];
       found.createdAt = new Date(parseInt(data[4], 10));
       await found.save();
-    } catch (err) {
+    } catch (err: any) {
       console.error(`Error saving registrant (${key}): ${err?.message}`);
     }
   }

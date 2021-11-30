@@ -19,30 +19,20 @@ There are additional tools on top of that
 
 `npm start`
 
-### Deploy Redis to Postgres
+### Deploy to Heroku
 
 - Provision a server with these add-ons
   - Heroku Postgres (sets DATABASE_URL)
   - Heroku Redis (sets REDIS_URL)
   - Heroku Scheduler
 
-And set this environment variable
+Use the Redis details for your virtual-event-starter-kit, so it will write there.
+Then set all the environment variables in `.env.example` that are not set by Heroku itself.
+
+This environment variable should be set if you use more than the Postgres Hobby plan.
 
 - `DATABASE_SSL_SELF_SIGNED=true`
 
-Then you can deploy to that server.
+When, deploy to Heroku, Grouparoo will be running on the website. Sign up your user upon first deploy.
 
-Use the Redis details for your virtual-event-starter-kit.
-
-### Deploy Grouparoo
-
-Set these environment variables:
-
-```
-WEB_URL=https://www.yourwebsite.com
-SERVER_TOKEN=my-super-cool-server-token (but changed)
-GROUPAROO_LOGS_STDOUT_DISABLE_TIMESTAMP=true (Heroku adds timestamps to all log messages)
-GROUPAROO_LOGS_STDOUT_DISABLE_COLOR=true
-GROUPAROO_OPTION__APP__MAILCHIMP_API_KEY=abc-us4
-GROUPAROO_OPTION__DESTINATION__MAILCHIMP_LIST_ID=xyz
-```
+To populate Postgres from Redis automatically, set a Job in Heroku Scheduler to run `./redis_to_postgres` every 10 minutes.
