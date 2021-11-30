@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "name",
   "type": "string",
-  "name": "Name",
+  "key": "Name",
   "sourceId": "registrants",
   "unique": false,
   "identifying": false,

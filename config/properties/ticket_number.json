@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "ticket_number",
   "type": "integer",
-  "name": "Ticket Number",
+  "key": "Ticket Number",
   "sourceId": "registrants",
   "unique": false,
   "identifying": true,
