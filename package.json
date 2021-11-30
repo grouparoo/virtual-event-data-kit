@@ -6,13 +6,13 @@
   "license": "MPL-2.0",
   "private": true,
   "engines": {
-    "node": "15.x"
+    "node": "16.x"
   },
   "dependencies": {
-    "@grouparoo/core": "0.5.1",
-    "@grouparoo/mailchimp": "0.5.1",
-    "@grouparoo/postgres": "0.5.1",
-    "@grouparoo/ui-community": "0.5.1",
+    "@grouparoo/core": "0.7.5",
+    "@grouparoo/mailchimp": "0.7.5",
+    "@grouparoo/postgres": "0.7.5",
+    "@grouparoo/ui-community": "0.7.5",
     "yargs": "17.0.1"
   },
   "devDependencies": {
