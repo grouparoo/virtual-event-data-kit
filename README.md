@@ -4,15 +4,16 @@ This project is meant to be deployed to Heroku and serve as the Redis storage fo
 
 Users sign up for the conference and they are stored in the Redis database.
 
-There are additional tools on top of that
+This repo is a template for the following:
 
-## Tools
-
-## Development
+- (optionally) Setting up that Redis database and hosting on Heroku
+- Reading out of Redis and writing into a Postgres database for easy querying
+- Syncing sign ups to Mailchimp or, using [Grouparoo](https://www.grouparoo.com), any other marketing automation provider.
 
 ### Setup
 
 `cp .env.example .env` and fill out the variables.
+
 `npm install`
 
 ### Run
@@ -33,6 +34,6 @@ This environment variable should be set if you use more than the Postgres Hobby 
 
 - `DATABASE_SSL_SELF_SIGNED=true`
 
-When, deploy to Heroku, Grouparoo will be running on the website. Sign up your user upon first deploy.
+When deployed to Heroku, [Grouparoo](https://www.grouparoo.com) will be running on the website. Set up your team after the first deploy.
 
 To populate Postgres from Redis automatically, set a Job in Heroku Scheduler to run `./redis_to_postgres` every 10 minutes.
