@@ -8,6 +8,7 @@ This repo is a template for the following:
 
 - (optionally) Setting up that Redis database and hosting on Heroku
 - Reading out of Redis and writing into a Postgres database for easy querying
+- Providing a way to browse and search your registrants
 - Syncing sign ups to Mailchimp or, using [Grouparoo](https://www.grouparoo.com), any other marketing automation provider.
 
 ### Setup
